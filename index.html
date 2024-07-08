@@ -1,3 +1,8 @@
+The issue lies in the commented-out closing tag for the `<nav>` element. You have an opening `<nav>` tag, but the closing `</nav>` tag is commented out. This is causing the HTML structure to be broken, which can prevent some elements from functioning properly.
+
+Here's the corrected version:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +24,8 @@
       <a href="https://kyukuu.github.io/kyuku/" class="link">SY.</a>
     </h3>
 
-    <!-- <nav class="nav center">
+    <nav class="nav center">
+      <!-- Un-commented out the closing tag -->
       <ul class="nav__list center">
         <li class="nav__list-item">
           <a class="link link--nav" href="#projects">Projects</a>
@@ -30,7 +36,7 @@
         <li class="nav__list-item">
           <a class="link link--nav" href="#contact">Contact</a>
         </li>
-      </ul> -->
+      </ul>
 
       <button type="button" aria-label="toggle theme" class="btn btn--icon">
         <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
@@ -183,3 +189,6 @@
 </body>
 
 </html>
+```
+
+This should fix the issue with the links not working.
